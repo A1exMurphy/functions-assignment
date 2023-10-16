@@ -29,6 +29,8 @@ function addNumbers(num1,num2) {
   return answer;
 }
 console.log('adding 1 + 2', addNumbers(1, 2));
+//this seems to have worked correctly returning the answer 3 but also at the end of the console log it appears to also be returning "-4 -5",
+//since my console is returning everything as sourcing from line 4 I'm not sure but assume it's coming from this function, and I don't know why.
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(num1, num2, num3) {
@@ -53,16 +55,40 @@ console.log('the number is positive, ', isPositive(-1));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array) {
+let numberslist = [1, 2, 3, 4];
+let lastValue = numberslist[numberslist.length - 1];
+console.log (lastValue);
 
+function getLast(lastValue) {
+  if (lastValue === 4) {
+  console.log('success')//I put this in here to try to test that it was working the way I expected it. Something isn't working since the auto test is 
+  //failing this question, but I can't figure out why.
+if (numberslist.length > 0) {
+  return lastValue
 }
+
+if (numberslist.length === 0) {
+  return 'undefined'
+}
+
+};
+}
+console.log('last number', getLast(lastValue));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
+function find(3, numberslist) {
+  for(let i=0; i<numberslist.length; i++){
+    if(numberslist[i] === 3) {
+      return true;
+    } else {
+      console.log false
+    }
+  }
 }
+console.log('do you have a 3?', find(3, numberslist))
 
 // ----------------------
 // Stretch Goals
